@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <H2>Component Computer</H2>
+  <p id="object"></p>
+  <h2>Var tambah kali bagi</h2>
+  <p id="demo"></p>
+  <p id="demo1"></p>
+  <p id="demo2"></p>
+  <h2>Object</h2>
+  <p id="car"></p>
+
+  <script>
+
+    var x = 4;
+    var y = 9;
+    var z = y + x;
+    var t = x * x;
+    var r = y / y;
+    document.getElementById("demo").innerHTML =
+      "Hasil dari 4 + 9 = " + z;
+    document.getElementById("demo1").innerHTML =
+      "Hasil dari 4 x 4 = " + t;
+    document.getElementById("demo2").innerHTML =
+      "Hasil dari 9 : 9 = " + r;
+
+    const car = {
+      Type: "Toyota Supra",
+      Model: " mkv4",
+      Color: " Silver"
+    };
+
+    document.getElementById("car").innerHTML = "Car " + car.Type + " Type " + car.Model + " Color " + car.Color;
+
+    const com = ["Ram", "Rom", "VGA", "Keyboard", "Monitor", "Mouse", "Processor", "MotherBoard", "Power Supply", "VGA RTX"];
+    let fLen = com.length;
+
+    let text = "<ol>";
+    for (let i = 0; i < fLen; i++) {
+      text += "<li>" + com[i] + "</li>";
+    }
+    text += "</ol>";
+
+    document.getElementById("object").innerHTML = text;
+  //</script>
+</body>
+
+</html>

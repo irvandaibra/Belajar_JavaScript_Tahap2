@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="script.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>kalkulator</title>
+
+  <style>
+    #box {
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    }
+
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+      width: 40%;
+      border-radius: 5px;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    img {
+      border-radius: 5px 5px 0 0;
+    }
+
+    .container {
+      padding: 10px 16px;
+    }
+
+    .button_div .box {
+      background-color: #117A65;
+      transition: all 0.35s ease;
+      border-radius: 15px;
+    }
+
+    .box .box:hover {
+      border: 1px solid #117A65;
+      background-color: white;
+      color: #117A65;
+      border-radius: 0px;
+    }
+  </style>
+</head>
+
+<body>
+  <center>
+    <h4>
+      KALKULATOR SEDERHANA
+    </h4>
+    <div class="card" style="width:100%, text-align= center">
+      <div class="container">
+        <br>
+        <input type="number" id="angka1">
+        <br />
+        <br />
+        <select id="operator">
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="*">*</option>
+          <option value="/">/</option>
+        </select>
+        <br />
+        <br />
+        <br />
+        <span id="hasil" style="font-size: 25;">hasil</span>
+        <br />
+        <br />
+        <br />
+        <input type="number" id="angka2">
+        <br>
+        <br />
+        <br>
+        <br>
+        <button class="box" id="submit">submit</button>
+        <br>
+        <br>
+      </div>
+
+    </div>
+    <script>
+      const angka1 = document.getElementById('angka1')
+      const angka2 = document.getElementById('angka2')
+      const operator = document.getElementById('operator')
+      const hasil = document.getElementById('hasil')
+      const submit = document.getElementById('submit')
+
+      submit.addEventListener('click', function () {
+        hasil.innerText = eval(angka1.value + operator.value + angka2.value)
+      })
+    </script>
+  </center>
+</body>
+
+</html>
